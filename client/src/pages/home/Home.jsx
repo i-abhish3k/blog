@@ -4,18 +4,20 @@ import Posts from "../../components/posts/Posts";
 import SideBar from "../../components/sidebar/SideBar";
 import "./home.css";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
   const [post, setPost] = useState([]);
+  const { search } = useLocation();
 
   useEffect(() => {
-    const feactPost = async () => {
-      const res = await axios.get("http://localhost:5000/api/posts");
+    const fetchPost = async () => {
+      const res = await axios.get("http://localhost:5000/api/posts" + search);
       console.log(res.data);
       setPost(res.data);
     };
-    feactPost();
-  }, []);
+    fetchPost();
+  }, [search]);
   return (
     <>
       <Header />
