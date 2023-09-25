@@ -7,12 +7,14 @@ const postRouter = require("./routes/post");
 const categoryRouter = require("./routes/category");
 const multer = require("multer");
 const cors = require("cors");
+const path = require("path");
 
 // .env config
 dotenv.config();
-
 // REST OBJ
 const app = express();
+
+app.use("/images", express.static(path.join(__dirname, "/images")));
 
 app.use(express.json());
 

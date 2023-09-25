@@ -8,8 +8,7 @@ const PostSchema = new mongoose.Schema(
       unique: true,
     },
     description: {
-      type: String, //string is the datatype of data that we are storing in our database
-      // minlength: [50 ,"Title should be atleast 10 characters long"],
+      type: String,
       required: true,
     },
     photo: {

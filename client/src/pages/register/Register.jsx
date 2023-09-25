@@ -19,13 +19,9 @@ export const Register = () => {
         email,
         password,
       });
-
-      console.log("tryRun");
       res.data && window.location.replace("/login");
     } catch (error) {
       setErr(true);
-      console.log("CatchRun");
-      console.log(error);
     }
   };
   return (
@@ -65,8 +61,8 @@ export const Register = () => {
       </button>
 
       {err && (
-        <span style={{ color: "red", marginTop: "10px" }}>
-          Somting went wrong
+        <span style={{ color: "red", marginTop: "10px", fontSize: "25px" }}>
+          Smothing Went Wrong...
         </span>
       )}
     </div>
