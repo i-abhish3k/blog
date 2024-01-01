@@ -23,12 +23,8 @@ app.use(cors({ origin: "http://localhost:5173" }));
 
 // DB Connect
 mongoose
-  .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUniFiedTopology: true,
-    // useCreateIndex: true,
-  })
-  .then(console.log("Connected to DB"))
+  .connect(process.env.MONGO_URL)
+  .then(() => console.log("Connected to DB"))
   .catch((err) => console.log(err));
 
 // !  Image uploading using multer

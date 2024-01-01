@@ -1,7 +1,7 @@
 import TopBar from "./components/topbar/TopBar";
 import Login from "./pages/login/Login";
 import { Register } from "./pages/register/Register";
-import { Setting } from "./pages/settings/Setting";
+import Settings from "./pages/settings/Setting";
 import Single from "./pages/single/Single";
 import { Write } from "./pages/write/Write";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -40,7 +40,7 @@ const App = () => {
         <Route
           exact
           path="/setting"
-          element={user ? <Setting /> : <Register />}
+          element={user ? <Settings /> : <Register />}
         />
         <Route exact path="/post/:postId" element={<Single />} />
       </Routes>
