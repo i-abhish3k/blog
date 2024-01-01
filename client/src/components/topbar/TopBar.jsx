@@ -43,7 +43,9 @@ const TopBar = () => {
       </div>
       <div className="topRight">
         {user ? (
-          <img className="topImg" src={user.profilePic} alt="IMG" />
+          <Link to="/setting">
+            <img className="topImg" src={user.profilePic} alt="IMG" />
+          </Link>
         ) : (
           <ul className="topList">
             <li className="topListItem">

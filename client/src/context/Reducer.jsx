@@ -20,8 +20,9 @@ const Reducer = (state, action) => {
       };
     case "UPDATE_START":
       return {
-        ...state,
+        user: null,
         isFetching: true,
+        error: false,
       };
     case "UPDATE_SUCCESS":
       return {
